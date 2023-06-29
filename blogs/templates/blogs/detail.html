@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h3>{{ post.title }}</h3>
+    <h5 style="white-space: pre-line; line-height: 1.5">{{ post.content }}</h5>
+    <p>{{ post.pub_date }}</p>
+    {% if post.photo %}
+    <img src="{{ post.photo.url }}">
+    {% endif %}
+    {% if post.file %}
+    <a href="{{ post.file.url }}" download class="btn btn-outline-dark">Download <i class="fa-solid fa-file"></i>
+    {{ post.get_file_name }}</a>
+    {% endif %}
+
+</div>
+{% endblock %}

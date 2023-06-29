@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogs</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+    <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+    <script src="https://kit.fontawesome.com/38abfd08d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{% include 'navbar.html' %}
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
